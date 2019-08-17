@@ -1,4 +1,4 @@
-package ru.my2i.jersey;
+package ru.my2i.wallet;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
@@ -18,7 +18,7 @@ public class App {
 
     private Server configureServer() {
         ResourceConfig resourceConfig = new ResourceConfig();
-        resourceConfig.packages("ru.my2i.jersey.rs");
+        resourceConfig.packages("ru.my2i.wallet.rs");
 
         ServletContainer servletContainer = new ServletContainer(resourceConfig);
         ServletHolder sh = new ServletHolder(servletContainer);

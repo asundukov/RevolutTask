@@ -1,4 +1,4 @@
-package ru.my2i.jersey.rs;
+package ru.my2i.wallet.rs;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -9,7 +9,7 @@ import javax.ws.rs.core.MediaType;
 import java.util.Arrays;
 import java.util.List;
 
-@Path("/main")
+@Path("/api")
 public class MainRs {
 
     @GET
