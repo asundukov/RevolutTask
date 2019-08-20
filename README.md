@@ -13,7 +13,7 @@
   1. Check balance: `curl "http://127.0.0.1:8080/api/wallet/amount?service=alpha&id=id2"` and `curl "http://127.0.0.1:8080/api/wallet/amount?service=beta&id=id3"`
 
 ## Build & compile
-1. Комипляция в single jar: `mvn clean compile assembly:single`
+1. Compile to single jar: `mvn clean compile assembly:single`
 
 ## General terms
 
