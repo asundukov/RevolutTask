@@ -9,20 +9,18 @@
 ## API endpoints
 
 ### Account wallet
-`GET /api/wallet?service=alpha&id=mail@mail.ru`
+`GET /api/wallet/amount?service=alpha&id=mail@mail.ru`
 ```json
-{
-  "amount": [{
+[{
     "value": 10,
     "currency": "RUB"
-  }]
-}
+}]
 ```
 
 
 ### Money transfer
 
-`POST /api/transfer`
+`POST /api/wallet/transfer`
 ```json
 {
   "from": {
@@ -41,15 +39,15 @@
 ```
 
 ### Зачисление средств
-`POST /service/wallet/add`
+`POST /service/wallet/add-amount`
 ```json
 {
   "user": {
     "service": "alhpa",
     "id": "mail@mail.ru"
   },
-  "amount": [{
+  "amount": {
     "value": 10,
     "currency": "RUB"
-  }]
+  }
 }```
