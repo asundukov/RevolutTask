@@ -1,6 +1,6 @@
-package ru.my2i.wallet.rs.exception;
+package ru.my2i.wallet.rs.exception.mapper;
 
-import com.exenium.core.resource.common.webexception.BadRequestWebException;
+import ru.my2i.wallet.rs.exception.BadRequestWebException;
 
 import javax.ws.rs.core.Response;
 

@@ -1,11 +1,7 @@
-package com.exenium.core.resource.common.webexception;
+package ru.my2i.wallet.rs.exception;
 
 public class BadRequestWebException extends WebException {
     public BadRequestWebException(Exception e) {
         super(e);
-    }
-
-    public BadRequestWebException(String message) {
-        super(message);
     }
 }

@@ -10,17 +10,17 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/service")
 @Produces(MediaType.APPLICATION_JSON)
-public class ServiceAccountRs {
+public class ServiceRs {
     private final WalletService walletService;
 
-    public ServiceAccountRs() {
+    public ServiceRs() {
         this.walletService = WalletService.getInstance();
     }
 
     @POST
-    @Path("/account/add-amounts")
-    public void addAmounts(AddAmountDto dto) {
-        walletService.addAmounts(dto.user.getUserModel(), dto.amount.getAmountListModel());
+    @Path("/wallet/add-amount")
+    public void addAmount(AddAmountDto dto) {
+        walletService.addAmount(dto.user.getUserModel(), dto.amount.getAmountModel());
     }
 
 }

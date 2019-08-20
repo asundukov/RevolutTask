@@ -1,4 +1,4 @@
-package ru.my2i.wallet.rs.exception;
+package ru.my2i.wallet.rs.exception.mapper;
 
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.ExceptionMapper;
