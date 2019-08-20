@@ -2,7 +2,7 @@
 
 ## Run ways
 1. `java -jar App.jar`
-1. mvn exec:java
+1. `mvn exec:java`
 
 ## Tests
 * Integration tests -  `mvn test`
