@@ -15,15 +15,17 @@
 ## Build & compile
 1. Комипляция в single jar: `mvn clean compile assembly:single`
 
-## Основные тезисы
+## General terms
 
-1. Сервис позволяет создавать другим системам данные о собственных пользовательских счетах внутри сервиса и переводить между ними средства (например, для будущего процессинга и реального вывода)
-1. В API есть две точки входа - сервисная (для добавления средств пользователей и тестовых нужд) и открытая (перевод средств с аккаунта на аккаунт)
-1. Каждый аккаунт характеризуется двумя строками - код внешней системы и идентификатор пользователя в той системе
-1. Многопоточность не обработана
-1. Архитектура в три слоя - Web-layer / Service-layer / Datastore-layer
+1. Service privides to other systems API for creating data about their user accounts/wallets and transferring funds between them.
+1. API contains two points - private /service (just for add funds and test requirments) and open /api (transfer funds)
+1. Every user/account identified by two string fields - _service name_ and _user_id_ of this service
+1. Multithreading didn't develop
+1. Architecture constructed in 3 layers - Resource-layer / Service-layer / Datastore-layer
 
 ## API endpoints
+
+Default running port: 8080
 
 ### Account wallet
 `GET /api/wallet/amount?service=alpha&id=mail@mail.ru`
