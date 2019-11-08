@@ -27,10 +27,10 @@ pre-installed container/server).
 ### Tests
 * Integration tests -  `mvn test`
 * Manual tests:
-  1. Add funds `curl -X POST http://127.0.0.1:8080/service/wallet/add-amount --data "{\"user\":{\"service\": \"alpha\",\"id\": \"id2\"}, \"amount\": {\"value\": 15000.05,\"currency\": \"RUB\"}}" -H "Content-type: application/json"`
-  1. Get balance `curl "http://127.0.0.1:8080/api/wallet/amount?service=alpha&id=id2"`
-  1. Transfer funds `curl -X POST http://127.0.0.1:8080/api/wallet/transfer --data "{\"from\":{\"service\": \"alpha\",\"id\": \"id2\"}, \"to\":{\"service\":\"beta\", \"id\":\"id3\"}, \"amount\": {\"value\": 5000.15,\"currency\": \"RUB\"}}" -H "Content-type: application/json"`
-  1. Check balance: `curl "http://127.0.0.1:8080/api/wallet/amount?service=alpha&id=id2"` and `curl "http://127.0.0.1:8080/api/wallet/amount?service=beta&id=id3"`
+  1. Add funds `curl -X POST http://127.0.0.1:8080/service/balance/add-amount --data "{\"user\":{\"service\": \"alpha\",\"id\": \"id2\"}, \"amount\": {\"value\": 15000.05,\"currency\": \"RUB\"}}" -H "Content-type: application/json"`
+  1. Get balance `curl "http://127.0.0.1:8080/api/balance/amount?service=alpha&id=id2"`
+  1. Transfer funds `curl -X POST http://127.0.0.1:8080/api/balance/transfer --data "{\"from\":{\"service\": \"alpha\",\"id\": \"id2\"}, \"to\":{\"service\":\"beta\", \"id\":\"id3\"}, \"amount\": {\"value\": 5000.15,\"currency\": \"RUB\"}}" -H "Content-type: application/json"`
+  1. Check balance: `curl "http://127.0.0.1:8080/api/balance/amount?service=alpha&id=id2"` and `curl "http://127.0.0.1:8080/api/balance/amount?service=beta&id=id3"`
 
 ### Build & compile
 1. Compile to single jar: `mvn clean compile assembly:single`
@@ -47,8 +47,8 @@ pre-installed container/server).
 
 Default running port: 8080
 
-#### Account wallet
-`GET /api/wallet/amount?service=alpha&id=mail@mail.ru`
+#### Account balance
+`GET /api/balance/amount?service=alpha&id=mail@mail.ru`
 ```json
 [{
     "value": 10,
@@ -59,7 +59,7 @@ Default running port: 8080
 
 #### Money transfer
 
-`POST /api/wallet/transfer`
+`POST /api/balance/transfer`
 ```json
 {
   "from": {
@@ -78,7 +78,7 @@ Default running port: 8080
 ```
 
 #### Зачисление средств
-`POST /service/wallet/add-amount`
+`POST /service/balance/add-amount`
 ```json
 {
   "user": {
