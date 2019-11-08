@@ -13,6 +13,8 @@ import ru.my2i.wallet.web.PaymentAgentRs;
 import ru.my2i.wallet.web.exception.mapper.BadRequestWebExceptionMapper;
 import ru.my2i.wallet.web.exception.mapper.ConflictWebExceptionMapper;
 import ru.my2i.wallet.web.exception.mapper.ConstraintViolationMapper;
+import ru.my2i.wallet.web.exception.mapper.GeneralWebExceptionMapper;
+import ru.my2i.wallet.web.exception.mapper.NotAllowedExceptionMapper;
 import ru.my2i.wallet.web.exception.mapper.NotFoundWebExceptionMapper;
 
 public class App {
@@ -35,6 +37,8 @@ public class App {
         resourceConfig.register(NotFoundWebExceptionMapper.class);
         resourceConfig.register(ConflictWebExceptionMapper.class);
         resourceConfig.register(ConstraintViolationMapper.class);
+        resourceConfig.register(NotAllowedExceptionMapper.class);
+        resourceConfig.register(GeneralWebExceptionMapper.class);
         resourceConfig.register(JacksonFeature.class);
 
         resourceConfig.register(new CurrencyRs(new CurrencyServiceFactoryImpl()));
