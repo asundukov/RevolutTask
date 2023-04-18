@@ -10,7 +10,7 @@
 
     <properties>
         <jersey.version>2.29</jersey.version>
-        <jetty.version>11.0.1</jetty.version>
+        <jetty.version>11.0.14</jetty.version>
         <jaxb.version>2.2.11</jaxb.version>
     </properties>
 
